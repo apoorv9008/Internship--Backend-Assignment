@@ -7,7 +7,7 @@ void multiply(ll F[2][2], ll M[2][2]);
 
 void power(ll F[2][2], ll n);
 
-ll largefibo(ll n)
+ll largefibo(ll n)              //function to calculate fibonacci series till n'th number
 {
     ll F[2][2] = {{1,1},{1,0}};
     if (n == 0)
@@ -20,7 +20,7 @@ ll largefibo(ll n)
     return (F[0][0]*3+F[0][1]*2)%MOD;
 }
 
-void power(ll F[2][2], ll n)
+void power(ll F[2][2], ll n)    //function to increase the power exponentially
 {
     if( n == 0 || n == 1)
         return;
@@ -33,7 +33,7 @@ void power(ll F[2][2], ll n)
         multiply(F, M);
 }
 
-void multiply(ll F[2][2], ll M[2][2])
+void multiply(ll F[2][2], ll M[2][2])      //function to multiply (2X2) matrix to itself to get the resultant value
 {
     ll x =  ((F[0][0]*M[0][0])%MOD + (F[0][1]*M[1][0])%MOD)%MOD;
     ll y =  ((F[0][0]*M[0][1])%MOD + (F[0][1]*M[1][1])%MOD)%MOD;
